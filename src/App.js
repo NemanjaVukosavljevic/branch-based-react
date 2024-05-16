@@ -6,6 +6,11 @@ import FirstPage from './Components/FirstPage';
 import SecondPage from './Components/SecondPage';
 
 function App() {
+
+    const klikni = () => {
+        console.log(`Kliknuta je!`);
+    }
+
   return (
     <>
     <Router>
@@ -27,7 +32,7 @@ function App() {
         <Route path='/'>
 
         </Route>
-        <Route path='/FirstPage' element={<FirstPage />}>
+        <Route path='/FirstPage' element={<FirstPage  Klikni={klikni}/>}>
 
         </Route>
         <Route path='/SecondPage' element={<SecondPage />}>

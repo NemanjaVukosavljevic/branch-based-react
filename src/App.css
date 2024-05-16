@@ -3,7 +3,11 @@
 @import 'tailwindcss/utilities';
 
 .standout {
-  box-shadow: rgba(2, 2, 2, 0.16) 0px 1px 4px, rgb(17, 10, 10) 0px 0px 0px 3px;
+  box-shadow: rgba(2, 2, 2, 0.16) 0px 1px 4px, rgb(0, 0, 0) 0px 0px 0px 3px;
 }
 
+
+.font {
+  font-family: "Poppins", sans-serif;
+}
 

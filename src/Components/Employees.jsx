@@ -6,8 +6,8 @@ const Employees = ( {employees, selectValue, handleEmployeeCardClick, handleTeam
 
     return (
         <>
-            <div className="min-h-[30vh] flex flex-col justify-center items-center">
-                    <select className="text-black h-[3rem] w-[80%] pl-5 text-xl rounded-md" value={selectValue} onChange={handleTeamSelectionChange}>
+            <div className="min-h-[10vh] flex flex-col justify-center items-center">
+                    <select className="text-black h-[3rem] w-[80%] lg:w-[75%] pl-5 text-xl rounded-md" value={selectValue} onChange={handleTeamSelectionChange}>
                         <option value="Select" hidden>Select a Team</option>
                         <option value="Team A">Team A</option>
                         <option value="Team B">Team B</option>
@@ -16,7 +16,7 @@ const Employees = ( {employees, selectValue, handleEmployeeCardClick, handleTeam
                     </select>
             </div>
 
-            <div className="flex flex-col lg:grid lg:grid-cols-3 gap-10 pb-5 mx-3 lg:mx-10">
+            <div className="flex flex-col lg:grid lg:grid-cols-3 gap-10 pb-5 mx-3 lg:mx-[15rem]">
                         {
                             employees.map((employee) => (
                                 <div key={employee.id} className={(employee.teamName === selectValue ? "h-[20rem] standout rounded-md flex flex-col justify-center items-center gap-5 text-xl cursor-pointer" : "h-[20rem] flex flex-col justify-center items-center gap-5  text-xl cursor-pointer")} onClick={() => handleEmployeeCardClick(employee.id)}>

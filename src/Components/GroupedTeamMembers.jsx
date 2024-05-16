@@ -36,8 +36,8 @@ const GroupedTeamMembers = ({ employees, selectValue, setEmployees }) => {
 
     return (
         <>
-            <div className="flex flex-col justify-center gap-4 p-5 text-center">
-                <h1 className="text-5xl">Grouped Team Members</h1>
+            <div className="flex flex-col justify-center gap-4 lg:mx-[20rem] p-5 text-center">
+                <h1 className="text-3xl lg:text-5xl">Team Members</h1>
                 {
                     groupedEmployees.map((item) => {
                         return (
@@ -51,14 +51,14 @@ const GroupedTeamMembers = ({ employees, selectValue, setEmployees }) => {
                                     {
                                         item.members.map((member) => {
                                             return (
-                                                <div className="mt-2" key={member.id}>
+                                                <div className="my-6 text-center" key={member.id}>
                                                     <h5 className="mt-2">
                                                         <span>
-                                                            Name: {member.fullName}
+                                                            <span className="text-blue-600">Name:</span> {member.fullName}
                                                         </span>
                                                     </h5>
                                                     <p>
-                                                        Designation: {member.designation}
+                                                        <span className="text-blue-600">Designation:</span> {member.designation}
                                                     </p>
                                                 </div>
                                             )

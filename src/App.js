@@ -45,7 +45,7 @@ function App() {
 
 
     return (
-    <div className='min-h-screen flex flex-col bg-gray-300'>
+    <div className='font min-h-screen flex flex-col bg-gray-200'>
         <Router>
             <Nav />
             <Header

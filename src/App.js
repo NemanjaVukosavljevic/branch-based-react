@@ -1,45 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import { Link } from 'react-router-dom';
-import FirstPage from './Components/FirstPage';
-import SecondPage from './Components/SecondPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Navbar from './Components/Navbar';
+import AboutUs from './Components/AboutUs';
+import ContactUs from './Components/ContactUs';
 
 function App() {
 
-    const klikni = () => {
-        console.log(`Kliknuta je!`);
-    }
 
   return (
     <>
-    <Router>
-      <div className="react-router bg-gray-500">
-        <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/FirstPage'>First Page</Link>
-            </li>
-            <li>
-              <Link to='/SecondPage'>Second Page</Link>
-            </li>
-        </ul>
-      </div>
+        <Router>
+            <Navbar />
 
-      <Routes>
-        <Route path='/'>
-
-        </Route>
-        <Route path='/FirstPage' element={<FirstPage  Klikni={klikni}/>}>
-
-        </Route>
-        <Route path='/SecondPage' element={<SecondPage />}>
-
-        </Route>
-      </Routes>
-    </Router>
+            <Routes>
+                <Route path='/' />
+                <Route path='/contact' element={<ContactUs />} />
+                <Route path='/about' element={<AboutUs />} /> 
+            </Routes>
+        </Router>
     </>
     
   );
